@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Naya Moll is the queen of this site
 
 ### More Information
 
