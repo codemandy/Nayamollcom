@@ -1,9 +1,7 @@
-# config.yml
 backend:
 name: github
-  repo: codemandy/Nayamollcom
-  # name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+repo: codemandy/Nayamollcom.git
+branch: main
 media_folder: 'assets/uploads'
 collections:
   - name: 'blog'
