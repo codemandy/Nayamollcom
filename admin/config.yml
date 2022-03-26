@@ -1,7 +1,10 @@
 backend:
-  name: github
-  repo: codemandy/Nayamollcom
+  name: test-repo
+  # name: git-gateway
+  # repo: codemandy/Nayamollcom
 media_folder: "images/uploads"
+auth_type: implicit
+app_id: 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
 
 collections:
   - name: 'blog'
