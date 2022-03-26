@@ -1,6 +1,18 @@
-- name: Home
-  link: /
-- name: About
-  link: /about/
-- name: Portfolio
-  link: /portfolio/
+# - name: Home
+#   link: /
+# - name: About
+#   link: /about/
+# - name: Portfolio
+#   link: /portfolio/
+
+
+# _data/navigation.yml
+items:
+  - name: Naya Moll
+    link: /
+  - name: About
+    link: /about/
+  - name: Cheography
+    link: /
+  - name: Staff
+    link: /
