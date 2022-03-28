@@ -30,16 +30,9 @@ collections:
             - label: 'Tagline'
               name: 'tagline'
               width: 'string'
-
-
-
-
-
-
-
-  - name: 'projects'
-    label: 'Projects'
-    folder: '_pages/'
+  - name: 'blog'
+    label: 'Blog'
+    folder: '_posts/'
     create: true
     editor:
       preview: true
@@ -49,20 +42,6 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-
-  - name: 'page'
-    label: 'Page'
-    folder: '_pages/'
-    create: true
-    slug: '{{slug}}'
-    editor:
-      preview: false
-    fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Permalink", name: "permalink", widget: "string"}
-      - {label: 'Body', name: 'body', widget: 'markdown'}
-
   - name: 'navbar'
     label: 'Navbar'
     editor:
@@ -78,8 +57,6 @@ collections:
             fields:
               - { label: Name, name: name, widget: string }
               - { label: Link, name: link, widget: string }
-
-
   - name: 'pages'
     label: 'Pages'
     editor:
