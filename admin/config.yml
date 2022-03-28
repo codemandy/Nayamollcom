@@ -1,7 +1,6 @@
 backend:
-  name: test-repo
-  # name: git-gateway
-  # repo: codemandy/Nayamollcom
+  name: git-gateway
+  repo: codemandy/Nayamollcom
 publish_mode: editorial_workflow
 media_folder: "images/uploads"
 auth_type: implicit
@@ -10,16 +9,20 @@ app_id: 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
 
 
 collections:
-  - name: 'site-settings'
-    label: 'Site Settings'
+  - name: 'website projects'
+    label: 'Website Projects'
+    create: true
+    editor:
+      preview: true
     files:
-      - label: 'Project Settings'
+      - label: 'Nayamoll projects'
         name: 'projects'
         file: '_data/site.yml'
         fields:
         - { label: 'Project Title', name: 'project title', widget: 'string' }
         - { label: 'Body tekst', name: 'body tekst', widget: 'markdown' }
         - { label: 'Credits', name: 'credits', widget: 'string' }
+        - { label: 'Projects Tag', name: 'project tag', widget: 'string' }
         - label: 'Seo Tagline'
           name: 'seo tagline'
           widget: 'object'
@@ -31,10 +34,10 @@ collections:
     label: 'Blog'
     folder: '_posts/'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
       preview: true
     fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
