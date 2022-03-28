@@ -2,11 +2,38 @@ backend:
   name: test-repo
   # name: git-gateway
   # repo: codemandy/Nayamollcom
+publish_mode: editorial_workflow
 media_folder: "images/uploads"
 auth_type: implicit
 app_id: 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
 
+
+
 collections:
+  - name: 'site-settings'
+    label: 'Website Settings'
+    files:
+      - label: 'Website settings'
+        name: 'site'
+        file: '_data/site.yml'
+        fields:
+        - { label: 'Project Title', name: 'project title', widget: 'string' }
+        - { label: 'Body tekst', name: 'body tekst', widget: 'markdown' }
+        - { label: 'Credits', name: 'credits', widget: 'string' }
+        - label: 'Seo Tagline'
+          name: 'seo tagline'
+          widget: 'object'
+          fields:
+            - label: 'Tagline'
+              name: 'tagline'
+              width: 'string'
+
+
+
+
+
+
+
   - name: 'blog'
     label: 'Blog'
     folder: '_posts/'
