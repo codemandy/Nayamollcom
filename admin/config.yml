@@ -1,7 +1,6 @@
 backend:
-  name: test-repo
-  # name: git-gateway
-  # repo: codemandy/Nayamollcom
+  name: git-gateway
+  repo: codemandy/Nayamollcom
 publish_mode: editorial_workflow
 media_folder: "images/uploads"
 auth_type: implicit
@@ -10,16 +9,20 @@ app_id: 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
 
 
 collections:
-  - name: 'site-settings'
-    label: 'Website Settings'
+  - name: 'website projects'
+    label: 'Website Projects'
+    create: true
+    editor:
+      preview: true
     files:
-      - label: 'Website settings'
-        name: 'site'
+      - label: 'Nayamoll projects'
+        name: 'projects'
         file: '_data/site.yml'
         fields:
         - { label: 'Project Title', name: 'project title', widget: 'string' }
         - { label: 'Body tekst', name: 'body tekst', widget: 'markdown' }
         - { label: 'Credits', name: 'credits', widget: 'string' }
+        - { label: 'Projects Tag', name: 'project tag', widget: 'string' }
         - label: 'Seo Tagline'
           name: 'seo tagline'
           widget: 'object'
@@ -34,14 +37,14 @@ collections:
 
 
 
-  - name: 'blog'
-    label: 'Blog'
-    folder: '_posts/'
+  - name: 'projects'
+    label: 'Projects'
+    folder: '_pages/'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
       preview: true
     fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
@@ -104,14 +107,3 @@ collections:
   #     - {label: "Featured Image", name: "thumbnail", widget: "image"}
   #     - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
   #     - {label: "Body", name: "body", widget: "markdown"}
-
-# collections:
-#   - name: "post" # Used in routes, e.g. /admin/collections/blog
-#     label: "Post" # Used in the UI
-#     folder: "_posts" # The path to the folder where the documents are stored
-#     create: true # Allow users to create new documents in this collection
-#     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template i.e. YYYY-MM-DD-title.md
-#     fields: # The fields for each document, usually in front matter
-#       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-#       - {label: "Title", name: "title", widget: "string"}
-#       - {label: "Body", name: "body", widget: "markdown"}
