@@ -1,6 +1,15 @@
 # _data/navigation.yml
 items:
+  - name: Naya Moll
+    link: /
   - name: Choreography
-    link: /_pages/choreography.html
+    link: choreography.md
+  - name: Collective Works
+    link: _posts/collective-works.md
+  - name: Choreography
+    link: _posts/choreography.md
+  - name: Dramaturgy
+    link: _posts/dramaturgy.md
+
   - name: About
-    link: /_pages/about.html
+    link: /about/
