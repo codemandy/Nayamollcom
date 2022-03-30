@@ -1,6 +1,8 @@
 ---
 layout: page
-title: Choregraphy
-permalink: /Choreography/
+title: Choreography
+permalink: /choreography/
 ---
 dsadasda
+dasdasas
+LALALLA
