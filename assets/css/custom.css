@@ -40,13 +40,21 @@ h1 {
   line-height:1.2;
   color: #000000;
   text-decoration: none;
+  grid-gap: 50px;
 
 }
+
 
 #header-links {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-content: center;
   justify-items: center;
+}
 
+#header-links a:first-child, #header-links a:last-child {
+  display: grid;
+  color: #DB96BA;
+  grid-gap: 150px;
+  justify-content: start;
 }
