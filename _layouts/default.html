@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="en-us" class="h-100">
+<html lang="en-us">
   <head>
     <title>
       <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-      {% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{
-      site.description }}
+      <!-- {% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{
+      site.description }} -->
     </title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Stylesheet that includes Bootstrap dark mode & custom stylesheet -->
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="{{ '/assets/css/normalize.css' | relative_url }}"/>
     <link rel="stylesheet" href="{{ '/assets/css/skeleton.css' | relative_url }}"/>
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}"/>
-
     <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}" />
 
     {% seo %} {% feed_meta %} {%- if jekyll.environment == 'production' and
@@ -22,9 +21,9 @@
   <body>
     <div class="container">
       {% include navigation.html %}
-      <div class="body">{{ content }}</div>
+      {{ content }}
     </div>
-    {% include footer.html %}
+    <!-- {% include footer.html %} -->
 
     <script>
       if (window.netlifyIdentity) {
