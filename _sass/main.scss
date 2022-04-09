@@ -1,135 +1,61 @@
 
-
-// h1, h2, h3, h4, h5, h6 {
-//   color:#222;
-  // margin:0 0 20px;
-// }
-
-p, ul, ol, table, pre, dl {
-  // margin:0 0 20px;
+* {
+  font-size: 20px;
+  box-sizing: border-box;
 }
 
-h1, h2, h3 {
-  line-height:1.1;
+body {
+  background-color: $naya-bg-color;
+  font-family: "LifeT";
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
 }
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 
 h1 {
-  font-size:28px;
-}
-
-// h2 {
-// }
-
-h3, h4, h5, h6 {
-  // color:#494949;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
 }
 
 
 
-a:hover, a:focus {
-  // color:#069;
-  // font-weight: bold;
-}
+#navbarNav {
+  font-weight: 400;
+  font-size: 20px;
 
-
-
-//----------------------------------------------- theme stuff
-
-
-
-
-
-table {
-  @extend .table;
-  @extend .table-striped;
-}
-
-blockquote {
-  @extend .blockquote;
-}
-
-img {
-  @extend .img-fluid;
-  margin-bottom: 1rem;
-}
-
-
-.archive-year {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-.archive-date {
-  float: right;
-  margin-left: 1rem;
-}
-
-.archive-item {
-  margin-bottom: 0.5rem;
-}
-
-.footer-container {
-  text-align: center;
-}
-
-.footer-icons {
-  width: 1.25rem;
-  height: 1.25rem;
-  margin-right: 0.5rem;
-}
-
-.footer-icon-links {
+  color: #000000;
   text-decoration: none;
-  color: #212529;
+
 }
 
-.footer-icon-links:hover,
-.footer-icon-links:focus {
+
+#nav-links {
+  font-weight: 400;
+  font-size: 20px;
+  line-height:1.2;
+  color: #000000;
   text-decoration: none;
-  color: #212529;
+  /* grid-gap: 50px; */
+
 }
 
-.archive-title {
-  color: #212529;
+
+#header-links {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  justify-items: center;
 }
 
-.highlight {
-  background-color: #272822;
+#header-links a:first-child, #header-links a:last-child {
+  display: grid;
+  color: #DB96BA;
+  grid-gap: 150px;
+  justify-content: start;
 }
-
-pre.highlight {
-  padding: 1rem;
-}
-
-.dark-avatar {
-  display: none !important;
-}
-
-.light-avatar,
-.dark-avatar {
-  margin-right: 0.25rem !important;
-}
-
-// @media (prefers-color-scheme: dark) {
-//   .footer-icon-links {
-//     text-decoration: none;
-//     color: #e1e1e1;
-//   }
-
-//   .footer-icon-links:hover,
-//   .footer-icon-links:focus {
-//     text-decoration: none;
-//     color: #e1e1e1;
-//   }
-
-//   .archive-title {
-//     color: #e1e1e1;
-//   }
-
-//   .light-avatar {
-//     display: none !important;
-//   }
-//   .dark-avatar {
-//     display: inline-block !important;
-//   }
-// }
