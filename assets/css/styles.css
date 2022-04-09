@@ -1,108 +1,29 @@
-
-* {
-  font-size: 20px;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: $naya-bg-color;
-  font-family: "LifeT";
-  margin: 0px;
-  padding: 0px;
-  min-height: 100vh;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-// LifeT
-// =============================================================================
-@font-face {
-  font-family: "LifeT";
-  src: font-url('LifeT/LifeT.ttf');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "LifeT Italic";
-  src: font-url('LifeT/LifeT Italic.ttf');
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: "LifeT Bold";
-  src: font-url('LifeT/LifeT Bold.ttf');
-  font-weight: 700;
-  font-style: bold;
-}
-
-// COLORS
-=============================================================================
-
-$naya-bg-color: #F5F5F5;
-$header-link-color: #F5F5F5;
-$header-link-color-hover: #F5F5F5;
-$normal-black: #000000;
-// =============================================================================
-
-
-h1 {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.2;
-}
-
-
-
-#navbarNav {
-  font-weight: 400;
-  font-size: 20px;
-
-  color: #000000;
-  text-decoration: none;
-
-}
-
-
 #nav-links {
   font-weight: 400;
   font-size: 20px;
   line-height:1.2;
   color: #000000;
   text-decoration: none;
-  /* grid-gap: 50px; */
+  padding: 0;
+  margin: 0;
 
 }
 
 
 #header-links {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-content: center;
-  justify-items: center;
+  grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+  margin-left: 0;
 }
 
-#header-links a:first-child, #header-links a:last-child {
-  display: grid;
-  color: #DB96BA;
-  grid-gap: 150px;
-  justify-content: start;
+#header-links a:first-child {
+  display: flex;
+  justify-content: flex-start;
 }
 
 
-.navbar {
-  margin-bottom: 2rem;
-  color: #000000;
+#header-links a:last-child {
+  display: flex;
+  justify-content: flex-end;
 
 }
-
-.header-links {
-  font-size: 20px;
-  color: #000000;
-  font-weight: 400;
-  margin-top: 15px;
-  cursor: pointer;
-  text-decoration: none;
-  margin-left: 2rem;
-  }
