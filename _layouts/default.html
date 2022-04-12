@@ -21,9 +21,11 @@
   <body>
     <div class="container">
       {% include navigation.html %}
+      <div class="container content">
       {{ content }}
     </div>
-    <!-- {% include footer.html %} -->
+    </div>
+    {% include footer.html %}
 
     <script>
       if (window.netlifyIdentity) {
