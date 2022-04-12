@@ -1,7 +1,6 @@
 backend:
-  name: test-repo
-  # name: git-gateway
-  # repo: codemandy/Nayamollcom
+name: git-gateway
+repo: codemandy/Nayamollcom
 publish_mode: editorial_workflow
 media_folder: "images/uploads"
 auth_type: implicit
@@ -30,8 +29,8 @@ collections:
 
 
 
-  - name: 'blog'
-    label: 'Blog'
+  - name: 'posts'
+    label: 'Posts'
     folder: '_posts/'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
@@ -39,9 +38,12 @@ collections:
       preview: true
     fields:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Project Title', name: 'project title', widget: 'string' }
+      - { label: 'Body tekst', name: 'body tekst', widget: 'markdown' }
+      - { label: 'Credits', name: 'credits', widget: 'string' }
+      - label: 'Seo Tagline'
+      - { label: 'Publish Date', name: 'date', widget: 'hidden' }
+
 
   - name: 'page'
     label: 'Page'
@@ -56,25 +58,11 @@ collections:
       - {label: "Permalink", name: "permalink", widget: "string"}
       - {label: 'Body', name: 'body', widget: 'markdown'}
 
-  - name: 'navbar'
-    label: 'Navbar'
-    editor:
-      preview: false
-    files:
-      - label: 'Navigation'
-        name: 'navigation'
-        file: '_data/navigation.yml'
-        fields:
-          - label: 'Navigation Items'
-            name: 'items'
-            widget: 'list'
-            fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Link, name: link, widget: string }
 
 
-  - name: 'pages'
-    label: 'Pages'
+
+  - name: 'about'
+    label: 'About'
     editor:
       preview: false
     files:
