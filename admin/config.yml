@@ -1,12 +1,22 @@
-backend:
-  name: test-repo
-  # name: git-gateway
-  # repo: codemandy/Nayamollcom
-publish_mode: editorial_workflow
-media_folder: "images/uploads"
-auth_type: implicit
-app_id: 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
+# backend:
+#   name: git-gateway
+#   repo: codemandy/Nayamollcom
+#   branch: main
+#   site_domain: https://6255c19863e8ce0009647cc1--nayamoll.netlify.app/
+#   publish_mode: editorial_workflow
+#   auth_type: implicit
+#   app_id: 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
 
+# Backend https://www.netlifycms.org/docs/configuration-options/#backend
+backend:
+  name: git-gateway
+  repo: codemandy/Nayamollcom
+  branch: main
+# Publish mode https://www.netlifycms.org/docs/configuration-options/#publish-mode
+publish_mode: editorial_workflow
+# Media and Public Folders https://www.netlifycms.org/docs/configuration-options/#media-and-public-folders
+media_folder: 'assets/images/uploads' # Media files will be stored in the repo under images/uploads
+public_folder: '/images/uploads'
 
 
 collections:
@@ -30,8 +40,8 @@ collections:
 
 
 
-  - name: 'blog'
-    label: 'Blog'
+  - name: 'posts'
+    label: 'Posts'
     folder: '_posts/'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
@@ -39,9 +49,12 @@ collections:
       preview: true
     fields:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Project Title', name: 'project title', widget: 'string' }
+      - { label: 'Body tekst', name: 'body tekst', widget: 'markdown' }
+      - { label: 'Credits', name: 'credits', widget: 'string' }
+      # - label: 'Seo Tagline', name: se
+      # - { label: 'Publish Date', name: 'date', widget: 'hidden' }
+
 
   - name: 'page'
     label: 'Page'
@@ -56,25 +69,11 @@ collections:
       - {label: "Permalink", name: "permalink", widget: "string"}
       - {label: 'Body', name: 'body', widget: 'markdown'}
 
-  - name: 'navbar'
-    label: 'Navbar'
-    editor:
-      preview: false
-    files:
-      - label: 'Navigation'
-        name: 'navigation'
-        file: '_data/navigation.yml'
-        fields:
-          - label: 'Navigation Items'
-            name: 'items'
-            widget: 'list'
-            fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Link, name: link, widget: string }
 
 
-  - name: 'pages'
-    label: 'Pages'
+
+  - name: 'about'
+    label: 'About'
     editor:
       preview: false
     files:
