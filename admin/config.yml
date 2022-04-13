@@ -31,45 +31,18 @@ collections:
               name: 'tagline'
               width: 'string'
 
-  - name: 'blog'
-    label: 'Blog'
-    folder: '_posts/'
-    create: true
-    editor:
-      preview: true
-    fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-  - name: 'navbar'
-    label: 'Navbar'
-    editor:
-      preview: false
-    files:
-      - label: 'Navigation'
-        name: 'navigation'
-        file: '_data/navigation.yml'
-        fields:
-          - label: 'Navigation Items'
-            name: 'items'
-            widget: 'list'
-            fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Link, name: link, widget: string }
-  - name: 'pages'
-    label: 'Pages'
-    editor:
-      preview: false
-    files:
-      - label: 'About Page'
-        name: 'about'
-        file: 'about.md'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
-          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'about' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+    - name: 'pages'
+      label: 'Pages'
+      editor:
+        preview: false
+      files:
+        - label: 'About Page'
+          name: 'about'
+          file: 'about.md'
+          fields:
+            - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
+            - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'about' }
+            - { label: 'Body', name: 'body', widget: 'markdown' }
 
 
   # collections:
