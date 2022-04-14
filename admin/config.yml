@@ -27,9 +27,6 @@ collections:
         name: 'site'
         file: '_data/site.yml'
         fields:
-        - { label: 'Project Title', name: 'project title', widget: 'string' }
-        - { label: 'Body tekst', name: 'body tekst', widget: 'markdown' }
-        - { label: 'Credits', name: 'credits', widget: 'string' }
         - label: 'Seo Tagline'
           name: 'seo tagline'
           widget: 'object'
@@ -40,36 +37,21 @@ collections:
 
 
 
-  - name: 'posts'
-    label: 'Posts'
-    folder: '_posts/'
+  - name: 'projects'
+    label: 'Projects'
+    folder: '_categories/'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    editor:
-      preview: true
-    fields:
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
-      - { label: 'Project Title', name: 'project title', widget: 'string' }
-      - { label: 'Body tekst', name: 'body tekst', widget: 'markdown' }
-      - { label: 'Credits', name: 'credits', widget: 'string' }
-      # - label: 'Seo Tagline', name: se
-      # - { label: 'Publish Date', name: 'date', widget: 'hidden' }
-
-
-  - name: 'page'
-    label: 'Page'
-    folder: '_pages/'
-    create: true
-    slug: '{{slug}}'
+    # permalink: /:categories/:title/
     editor:
       preview: false
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Permalink", name: "permalink", widget: "string"}
-      - {label: 'Body', name: 'body', widget: 'markdown'}
-
-
+      - { label: 'Project Title', name: 'project title', widget: 'string' }
+      - { label: 'Categories', name: 'categories', widget: 'string' }
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - { label: 'Body tekst', name: 'body tekst', widget: 'markdown' }
+      - { label: 'Credits', name: 'credits', widget: 'string' }
+      - {label: "Publish Date", name: "date", widget: "datetime"}
 
 
   - name: 'about'

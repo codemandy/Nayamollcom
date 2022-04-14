@@ -3,10 +3,10 @@ items:
   - name: Naya Moll
     link: /
   - name: Choreography
-    link: /choreography/
+    link: _categories/choreography/
   - name: Collective Works
-    link: /collective-works/
+    link: _categories/collective-work/
   - name: Dramaturgy
-    link: /dramaturgy/
+    link: _categories/dramaturgy/
   - name: About
     link: /about/
