@@ -1,7 +1,5 @@
 ---
-layout: page
 title: Collective Works
-permalink: /collective-works/
-categories: navigation
+category: collective-works
 order: 2
 ---

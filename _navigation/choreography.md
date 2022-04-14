@@ -1,9 +1,5 @@
 ---
-layout: page
 title: Choreography
-categories: Choreography
+category: navigation
 order: 1
 ---
-
-
-<!-- {% if categories} -->

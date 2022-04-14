@@ -1,8 +1,5 @@
 ---
-layout: page
 title: Dramaturgy
-permalink: /dramaturgy/
-categories: navigation
+category: navigation
 order: 3
 ---
-dnijasdbiojasbdiuansi

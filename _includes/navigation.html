@@ -1,11 +1,31 @@
   <div class="container navbar">
     <div>
       <div id="header-links">
-        {% for item in site.data.navigation.items %}
-       <a id="nav-links" href="{{ site.baseurl }}{{ item.link }}" {% if page.url == item.link %}style="color: #0038FF;"{% endif %}>
+        {% for page in site.navigation %}
+        {% if navigation.category == site.projects.category %}
+       <a id="nav-links" href="{{ site.baseurl }}{{ item.title }}" {% if page.url == item.link %}style="color: #0038FF;"{% endif %}>
        {{ item.name }}
       </a>
        {% endfor %}
     </div>
     </div>
   </div>
+
+  <!-- <ul>
+    {% for doc in site.docs %}
+      {% if doc.category == "getting-started" %}
+        <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+</ul>
+
+{% assign mydocs = site.docs | group_by: 'category' %}
+{% for cat in mydocs %}
+<h2>{{ cat.name | capitalize }}</h2>
+    <ul>
+      {% assign items = cat.items | sort: 'order' %}
+      {% for item in items %}
+        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+{% endfor %} -->

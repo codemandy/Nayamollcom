@@ -46,13 +46,20 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "project"}
+      - { label: "Layout", name: "layout", widget: "hidden", default: "project"}
       - { label: 'Project Title', name: 'project title', widget: 'string' }
       - { label: 'Categories', name: 'categories', widget: 'string' }
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - { label: "Featured Image", name: "thumbnail", widget: "image"}
       - { label: 'Body tekst', name: 'body tekst', widget: 'markdown' }
       - { label: 'Credits', name: 'credits', widget: 'string' }
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - { label: "Publish Date", name: "date", widget: "datetime"}
+
+  # - name: 'categories'
+  #   label: 'Categories'
+  #   folder: '_categories/'
+  #   output: true
+  #   create: true
+
 
 
   - name: 'about'
