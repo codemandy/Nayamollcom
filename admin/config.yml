@@ -39,13 +39,14 @@ collections:
 
   - name: 'projects'
     label: 'Projects'
-    folder: '_categories/'
+    folder: '_projects/'
+    output: true
     create: true
     # permalink: /:categories/:title/
     editor:
       preview: false
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "project"}
       - { label: 'Project Title', name: 'project title', widget: 'string' }
       - { label: 'Categories', name: 'categories', widget: 'string' }
       - {label: "Featured Image", name: "thumbnail", widget: "image"}

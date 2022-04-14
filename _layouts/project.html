@@ -1,9 +1,14 @@
-
+---
+layout: default
+title: projects
+---
 
 
 <!-- IMAGE
 TITLE -->
 
-{% for pages in site.categories %}
+{% for project in site.projects %}
   <li><a href="{{ page.url }}">{{ page.title }}</a></li>
 {% endfor %}
+
+<div>{{ content }}</div>
